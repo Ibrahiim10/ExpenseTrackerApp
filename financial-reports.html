@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Financial Reports</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Expense Tracker</a>
+      <a href="transaction-history.html">Transaction History</a>
+      <a href="financial-reports.html" class="active">Financial Reports</a>
+    </nav>
+
+    <h1>Financial Reports</h1>
+
+    <div class="report-period">
+      <label for="report-month">Select Month:</label>
+      <select id="report-month">
+        <option value="current">Current Month</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      <button id="generate-report">Generate Report</button>
+    </div>
+
+    <div class="charts-container">
+      <div class="chart-section">
+        <h2>Expenses by Category</h2>
+        <canvas id="category-chart"></canvas>
+      </div>
+
+      <div class="chart-section">
+        <h2>Monthly Trend</h2>
+        <canvas id="monthly-trend-chart"></canvas>
+      </div>
+    </div>
+
+    <div class="summary-section">
+      <h2>Financial Summary</h2>
+      <div class="summary-cards">
+        <div class="summary-card">
+          <h3>Total Expenses</h3>
+          <p id="total-expenses">$0.00</p>
+        </div>
+        <div class="summary-card">
+          <h3>Highest Category</h3>
+          <p id="highest-category">-</p>
+        </div>
+        <div class="summary-card">
+          <h3>Average Daily</h3>
+          <p id="average-daily">$0.00</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
