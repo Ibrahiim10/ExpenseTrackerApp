@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Transaction History</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Expense Tracker</a>
+      <a href="transaction-history.html" class="active">Transaction History</a>
+      <a href="financial-reports.html">Financial Reports</a>
+    </nav>
+
+    <h1>Transaction History</h1>
+
+    <div class="filters">
+      <label for="month-filter">Month:</label>
+      <select id="month-filter">
+        <option value="all">All Months</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+
+      <label for="category-filter">Category:</label>
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="Food & Beverage">Food & Beverage</option>
+        <option value="Rent">Rent</option>
+        <option value="Transport">Transport</option>
+        <option value="Relaxing">Relaxing</option>
+      </select>
+
+      <button id="apply-filters">Apply Filters</button>-->
+    </div>
+
+    <div class="transactions-list">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="transactions-table-body"></tbody>
+        <tfoot>
+          <tr>
+            <td>Filtered Total:</td>
+            <td></td>
+            <td id="filtered-total"></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
